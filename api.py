@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import request
 #import random
-#import os
+import os
 import pandas as pd
 from joblib import load
 
@@ -92,9 +92,9 @@ def feat_import():
     feature_importance = make_feats(id_client)
     return feature_importance
 
-api.run()
-"""
-port = int(os.environ.get("PORT", 17995))
-app.run(host='0.0.0.0', port=port)
-"""
+#api.run()
+
+port = int(os.environ.get("PORT", 5000))
+api.run(host='0.0.0.0', port=port)
+
 # python api.py
