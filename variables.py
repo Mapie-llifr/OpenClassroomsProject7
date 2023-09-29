@@ -1,6 +1,3 @@
-from functions import load_data
-from joblib import load
-
 # Variables d'environnements
 
 # Liens vers les sources externes en usage local, ou après déploiement
@@ -13,7 +10,3 @@ MODEL_URL = MODEL                               # local
 
 
 SEUIL = 0.20
-
-df = load_data(3000)
-
-clf = load(MODEL_URL)
