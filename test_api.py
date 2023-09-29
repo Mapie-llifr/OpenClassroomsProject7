@@ -1,6 +1,7 @@
 import pytest
 from OpenClassroomsProject7 import api
 
+
 """
 @pytest.fixture
 def client():
