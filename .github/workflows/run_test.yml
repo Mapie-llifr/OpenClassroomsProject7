@@ -24,5 +24,6 @@ jobs:
       - name: Test api with pytest
         run: |
           pip install pytest pytest-cov
-          pytest test_api.py::test_accord_accorded --cov=api.py --cov-report=html
+          pytest test_api.py 
 ...
+#--cov=api.py --cov-report=html
