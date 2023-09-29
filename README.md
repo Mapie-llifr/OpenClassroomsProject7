@@ -1,15 +1,15 @@
 # API Pret à Dépenser
-Application permettant d'utiliser un modèle de prédiction de remboursement d'emprunt. 
+Application permettant d'utiliser un modèle de prédiction de remboursement d'emprunt.  
 
 Ce programme a été créé dans le cadre de la formation Data Scientist chez OpenClassrooms.  
 Il se base sur les données d'une compétition Kaggle : Home Credit.  
 
 ## Fichiers
-Programme écrit en language python
+Programme écrit en language python  
 Les données : dans Docs_projet7   
 - small_model_final.csv : données de moins de 800 variables sur 3000 clients.   
 
-
+Autres fichiers :  
 - small_model_final.joblib : modèle plus petit que l'original (lightGBM) pour le déploiement, modèle de regression logistique entrainé sur l'ensemble des données fournies par Home Credit, enregistré en format joblib.  
 - Procfile : fichier utilisé par Heroku pour mettre en place le server web built-in Flask.  
 
@@ -17,7 +17,7 @@ Les données : dans Docs_projet7
 - api.py : fichier principal comprenant l'API utilisant Flask.  
 
 ## Requirements
-Environnement nécessaire au fonctionnement de l'application :  
+Environnement nécessaire au fonctionnement de l'application :     
 - Python, version 3.10  
 
 
@@ -37,21 +37,21 @@ Environnement nécessaire au fonctionnement de l'application :
 - watchdog==3.0.0
 
 ## Fonctionnement
-L'API reçoit en paramètre de requetes le numéro d'identification du client (valeur de 'SK_ID_CURR').   
-Le programme charge les données d'application relatives à ce client.  
-L'API utilise le modèle pour prédire la probabilité de non remboursement d'un emprunt.  
-Cette probabilité est interprétée, comparée à un SEUIL, en-deçà duquel le pret est accepté.  
-Cette probabilté si elle est supérieure au SEUIL, mais inférieure à 0,5, le pret est jugé risqué.  
-Si la probabilité est supérieure à 0,5, le pret est refusé.  
+L'API reçoit en paramètre de requetes le numéro d'identification du client (valeur de 'SK_ID_CURR').      
+Le programme charge les données d'application relatives à ce client.     
+L'API utilise le modèle pour prédire la probabilité de non remboursement d'un emprunt.     
+Cette probabilité est interprétée, comparée à un SEUIL, en-deçà duquel le pret est accepté.     
+Cette probabilté si elle est supérieure au SEUIL, mais inférieure à 0,5, le pret est jugé risqué.     
+Si la probabilité est supérieure à 0,5, le pret est refusé.     
 
 
-Le SEUIL a été determiné en calculant que le risque d'accorder un pret à un client qui ne rembourse pas est dix fois plus important que le manque à gagner à refuser un pret à un client qui aurait remboursé.  
+Le SEUIL a été determiné en calculant que le risque d'accorder un pret à un client qui ne rembourse pas est dix fois plus important que le manque à gagner à refuser un pret à un client qui aurait remboursé.     
 
 
-L'API renvoit aussi un dictionnaire contenant les dix features ayant le plus d'importances (en valeur absolue) dans la prédiction réalisée pour ce client.  
+L'API renvoit aussi un dictionnaire contenant les dix features ayant le plus d'importances (en valeur absolue) dans la prédiction réalisée pour ce client.    
 
 ## Interface
-Une interface est disponible pour cette API : https://github.com/Mapie-llifr/OC_P7  
+Une interface est disponible pour cette API : https://github.com/Mapie-llifr/OC_P7     
 visible @   https://pret-a-depenser.streamlit.app/
 
 ## Déploiement
