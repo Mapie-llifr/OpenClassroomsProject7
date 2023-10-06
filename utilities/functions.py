@@ -1,7 +1,7 @@
 # imports
 import pandas as pd
 from joblib import load
-from OpenClassroomsProject7 import variables as var
+from utilities import variables as var
 
 # Liens vers les sources externes en usage local, ou après déploiement
 MODEL = var.MODEL
