@@ -5,8 +5,8 @@ from flask import request
 import os
 import pandas as pd
 from joblib import load
-from app import functions as func
-from app import variables as var
+from utilities import functions as func
+from utilities import variables as var
 
 api = Flask(__name__)
 api.config["DEBUG"] = False
