@@ -5,8 +5,8 @@ from flask import request
 import os
 import pandas as pd
 from joblib import load
-from OpenClassroomsProject7 import functions as func
-from OpenClassroomsProject7 import variables as var
+from . import functions as func
+from . import variables as var
 
 api = Flask(__name__)
 api.config["DEBUG"] = False
@@ -23,9 +23,6 @@ MODEL_URL = var.MODEL_URL
 
 SEUIL = var.SEUIL
 
-df = func.load_data(3000)
-
-clf = load(MODEL_URL)
 
 # Fournit sur requete la probabilité de non remboursement et l'interprétation à en faire. 
 @api.route("/predict")
@@ -43,7 +40,6 @@ def predict():
 # Fournit sur requete la feature importance locale pour les dix meilleurs features. 
 @api.route("/feats")
 def feat_import():
-    clf = load(MODEL_URL)
     if 'id' in request.args:
         id_client = int(request.args['id'])
     else : 

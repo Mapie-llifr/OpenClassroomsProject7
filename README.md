@@ -12,9 +12,20 @@ Les données : dans Docs_projet7
 Autres fichiers :  
 - small_model_final.joblib : modèle plus petit que l'original (lightGBM) pour le déploiement, modèle de regression logistique entrainé sur l'ensemble des données fournies par Home Credit, enregistré en format joblib.  
 - Procfile : fichier utilisé par Heroku pour mettre en place le server web built-in Flask.  
+- .github/workflows/run_test.yml : fichier pour lancement des tests automatiques par GitActions.  
 
 
 - api.py : fichier principal comprenant l'API utilisant Flask.  
+- functions.py : module avec les fonctions pour l'API.  
+- variables.py : module avec les variables d'environnement pour l'API. 
+
+## Installation
+Installation de Python : https://www.python.org/downloads/  
+Installation des dépendences :  
+```bash
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
 
 ## Requirements
 Environnement nécessaire au fonctionnement de l'application :     
