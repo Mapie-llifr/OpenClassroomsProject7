@@ -1,5 +1,5 @@
 import pytest
-from OpenClassroomsProject7 import functions as func
+from utilities import functions as func
 
 
 """
