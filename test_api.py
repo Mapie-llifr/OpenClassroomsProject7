@@ -42,7 +42,7 @@ def test_accord_accorded():
     assert func.accord(pred) == expected_value
 
 def test_accord_risked():
-    pred = 0.3
+    pred = 0.48
     expected_value = 5
     assert func.accord(pred) == expected_value
 

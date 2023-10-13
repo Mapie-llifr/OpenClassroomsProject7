@@ -9,4 +9,7 @@ DATA_URL = "./Docs_projet7/small_df_model_final.csv"  #local
 MODEL_URL = MODEL                               # local
 
 
-SEUIL = 0.20
+if MODEL == "pipeline_lightGBM_final.joblib" : 
+    SEUIL = 0.11
+elif MODEL == 'small_model_final.joblib' : 
+    SEUIL = 0.45
